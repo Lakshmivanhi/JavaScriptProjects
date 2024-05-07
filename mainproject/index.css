@@ -1,0 +1,398 @@
+/* Styles for the tabbed interface */
+  .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f188;
+    display: flex;
+    justify-content: space-evenly;
+    animation: tablist 1s;
+  }
+  @keyframes tablist {
+    0%{
+      transform: translatey(-50px)
+    }
+    100%{
+      transform: translatey(50px);
+    }
+  }
+ 
+  .tab button {
+    background-color: blue;
+    border: 1px solid blue;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+  }
+  .tab button:hover {
+    background-color: #ccc;
+    font-size: 15px;
+    font-weight: bold;
+  } 
+  .tab button.active {
+    background-color: pink;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+
+  @media only screen and (max-width: 767px) {
+    
+    .tab {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    .tab button {
+      width: 80%; 
+      margin-bottom: 5px; 
+      margin-top: 5px;
+      font-size: 14px; 
+      padding: 10px 0; 
+    }
+  }
+
+
+  @media only screen and (max-width: 320px) {
+   
+    .tab {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    .tab button {
+      width: 80%;
+      margin-top: 5px;
+      margin-bottom: 5px; 
+      font-size: 14px; 
+      padding: 10px 0; 
+    }
+  }
+
+
+  /* Styles for gallery container */
+ 
+  #uploadHeading{
+    margin-left: 1rem;
+    font-size:x-large;
+    font-weight: bold;
+    color: rgb(236, 75, 102)
+  }
+  #sideheading{
+    margin-left: 1.5rem;
+    font-size:x-large;
+    font-weight: bold;
+    color: rgb(236, 75, 102)
+    
+  }
+  .gallery {
+    display: none;
+    margin-left: 60px;
+  }
+  .gallery.active {
+    display: block;
+    
+  }
+   .gallery img{
+    margin: 15px 15px 15px 15px;
+    object-fit: cover;
+  }
+   .gallery video{
+    margin: 15px 15px 15px 15px;
+    object-fit: cover;
+  }
+  .gallery img:hover{
+    transform: translateY(-10px);
+    border: 1px solid black;
+  }
+  .gallery video:hover{
+    transform: translateY(-10px);
+    border: 1px solid black;
+  }
+  #All{
+    margin-left: 70px;
+  }
+  /* Styles for file upload section */
+  .upload-section {
+    margin-top: 20px;
+    text-align: center;
+  }
+  /* Styles for media items */
+  .media-item {
+    display: inline-block;
+    margin-right: 32px;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 300px;
+  }
+  .media-item img,
+  .media-item video {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  #uploaded-container{
+    margin-left: 80px;
+  }
+
+
+  @media only screen and (min-width: 320px) and (max-width: 374px) {
+    #sideheading, #uploadHeading {
+      margin-left: 1rem;
+      font-size: smaller; 
+      font-weight: bold;
+      color: rgb(236, 75, 102);
+    }
+    .gallery {
+      display: none;
+      margin-left: 0px; 
+    }
+    .gallery.active {
+      display: block;
+    }
+    .gallery img {
+      margin: 10px; 
+      object-fit: cover;
+    }
+    .gallery video {
+      margin: 10px; 
+      object-fit: cover;
+    }
+    #All {
+      margin-left: 0px; 
+    }
+    /* Styles for file upload section */
+    .upload-section {
+      margin-top: 20px;
+      text-align: center;
+    }
+    /* Styles for media items */
+    .media-item {
+      display: inline-block;
+      width: 300px; 
+      height: 300px;
+      overflow: hidden;
+    }
+    .media-item img,
+    .media-item video {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+    #uploaded-container{
+      margin-left: 5px;
+    }
+    .upload-section  input{
+      margin-left: 60px;
+    }
+  }
+
+
+  @media only screen and (min-width: 375px) and (max-width: 424px) {
+    #sideheading, #uploadHeading {
+      margin-left: 1rem;
+      font-size: medium; 
+      font-weight: bold;
+      color: rgb(236, 75, 102);
+    }
+    .gallery {
+      display: none;
+      margin-left: 20px; 
+    }
+    .gallery.active {
+      display: block;
+    }
+    .gallery img {
+      margin: 10px; 
+      object-fit: cover;
+    }
+    .gallery video {
+      margin: 10px; 
+      object-fit: cover;
+    }
+    
+    #All {
+      margin-left: 25px; 
+    }
+    /* Styles for file upload section */
+    .upload-section {
+      margin-top: 20px;
+      text-align: center;
+    }
+    /* Styles for media items */
+    .media-item {
+      display: inline-block;
+      width: 300px; 
+      height: 300px;
+    }
+    .media-item img,
+    .media-item video {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+    #uploaded-container{
+      margin-left: 30px;
+    }
+    .upload-section  input{
+      margin-left: 40px;
+    }
+  }
+
+
+  @media only screen and (min-width: 425px) and (max-width: 767px) {
+    #sideheading, #uploadHeading {
+      margin-left: 1.5rem;
+      font-size: large; 
+      font-weight: bold;
+      color: rgb(236, 75, 102);
+    }
+    .gallery {
+      display: none;
+      margin-left: 30px; 
+    }
+    .gallery.active {
+      display: block;
+    }
+    .gallery img {
+      margin: 15px; 
+      object-fit: cover;
+    }
+    .gallery video {
+      margin: 15px; 
+      object-fit: cover;
+    }
+    
+    #All {
+      margin-left: 35px; 
+    }
+    /* Styles for file upload section */
+    .upload-section {
+      margin-top: 20px;
+      text-align: center;
+    }
+    /* Styles for media items */
+    .media-item {
+      display: inline-block;
+      width: 300px; 
+      height: 300px;
+    }
+    .media-item img,
+    .media-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    #uploaded-container{
+      margin-left: 50px;
+    }
+    .upload-section  input{
+      margin-left: 30px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #sideheading, #uploadHeading {
+      margin-left: 1rem;
+      font-size: larger; 
+      font-weight: bold;
+      color: rgb(236, 75, 102);
+    }
+    .gallery {
+      display: none;
+      margin-left: 10px;
+    }
+    
+    .gallery img:hover{
+      transform: translateY(-10px);
+      border: 1px solid black;
+    }
+    .gallery video:hover{
+      transform: translateY(-10px);
+      border: 1px solid black;
+    } 
+    #All {
+      margin-left: 10px;
+    }
+    /* Styles for file upload section */
+    .upload-section {
+      margin-top: 20px;
+      text-align: center;
+    }
+    /* Styles for media items */
+    .media-item {
+      display: inline-block;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+    .media-item img,
+    .media-item video {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+    #uploaded-container{
+      margin-left: 10px;
+    }
+  }
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
